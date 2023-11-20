@@ -11,14 +11,13 @@ p {
 .contact-form__heading {
     margin-bottom: 50px;
     text-align: center;
-    font-size: 24px;
 }
 
 .form {
     margin: 0 auto;
     width: 80%;
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .form__group {
@@ -157,13 +156,13 @@ p {
 }
 
 .form__button-submit {
-    padding: 10px;
-    width: 170px;
+    padding: 15px;
+    width: 160px;
     height: 50px;
     border: none;
     border-radius: 5px;
     background: #000;
     color: #fff;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 16px;
 }

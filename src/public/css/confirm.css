@@ -62,13 +62,13 @@ input {
 }
 
 .form__button-submit {
-    padding: 10px;
-    width: 170px;
+    padding: 15px;
+    width: 160px;
     height: 50px;
     border: none;
     border-radius: 5px;
     background: #000;
     color: #fff;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 16px;
 }
