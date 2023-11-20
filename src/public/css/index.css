@@ -1,0 +1,169 @@
+p {
+    margin: 5px 0 3px 0;
+}
+
+.contact-form__content {
+    margin: 0 auto;
+    padding: 1em 0;
+    max-width: 1230px;
+}
+
+.contact-form__heading {
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.form {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.form__group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form__label--item,
+.content__postcode label {
+    font-weight: bold;
+    display: inline-block;
+    padding-top: 10px;
+}
+
+.form__label--item-gender {
+    font-weight: bold;
+}
+
+.form__label--required {
+    color: red;
+}
+
+.form__group-content--name {
+    width: 600px;
+}
+
+.form__group-content--gender {
+    width: 600px;
+    padding-bottom: 23px;
+}
+
+.form__input--male {
+    margin-left: 10px;
+}
+
+.form__input--male,
+.form__input--female {
+    padding-bottom: 7px;
+}
+
+.form__error,
+.form__error--gender,
+.form__error--postcode {
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
+}
+
+.form__error--gender {
+    margin-top: 5px;
+}
+
+.form__input--text input,
+.form__input--textarea textarea {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 600px;
+    appearance: none;
+}
+
+.form__input--name input {
+    padding: 10px;
+    width: 280px;
+    border: 1px solid gray;
+    border-radius: 5px;
+
+    appearance: none;
+}
+
+.postcode__icon {
+    width: 40px;
+}
+
+.form__input--postcode input {
+    padding: 10px;
+    width: 560px;
+    border: 1px solid gray;
+    border-radius: 5px;
+
+    appearance: none;
+}
+
+.form__input--postcode label {
+    font-weight: bold;
+}
+
+.form__input--text input,
+.form__input--name input,
+.form__input--postcode input {
+    height: 40px;
+}
+
+.form__input--textarea textarea {
+    height: 180px;
+}
+
+.form__group-content--name,
+.content__postcode {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content__name--family-name,
+.content__name--given-name,
+.form__group-content,
+.content__postcode--text {
+    color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.content__gender-inner {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.form__input--male input,
+.form__input--female input {
+    transform: scale(3);
+}
+
+.form__group-content--gender label {
+    margin: 0 30px 0 20px;
+}
+
+.content__postcode {
+    display: flex;
+}
+
+.form__button {
+    margin-top: 30px;
+}
+
+.form__button-submit {
+    padding: 10px;
+    width: 170px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}

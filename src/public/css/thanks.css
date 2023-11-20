@@ -1,0 +1,26 @@
+.thanks__content {
+    margin: auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+p {
+    margin: 150px 0 50px;
+}
+
+.form__button-submit {
+    display: block;
+    padding: 10px;
+    width: 170px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
