@@ -1,8 +1,7 @@
 function setupFocusEvent(inputName, jsErrorId) {
-    // var inputField = document.querySelector('input[name="' + inputName + '"]');
-    var inputField = document.querySelector('input[name="family-name"]');
-    console.log(inputField); // この行を追加して、コンソールに結果を表示
-    inputField.addEventListener('input', function () {
+    var inputField = document.querySelector('input[name="' + inputName + '"]');
+    var jsErrorElement = document.getElementById(jsErrorId);
+    inputField.addEventListener('blur', function () {
         if (this.value.trim() === '') {
             displayErrorMessage(jsErrorElement, "この項目は必須です。");
         } else {
