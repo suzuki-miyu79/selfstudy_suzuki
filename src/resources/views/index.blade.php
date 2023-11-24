@@ -3,6 +3,7 @@
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/index.css') }}">
 <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
+<script src="{{ asset('js/validation.js') }}"></script>
 @endsection
 
 @section('content')
@@ -30,6 +31,8 @@
                         {{ $message }}
                         @enderror
                     </div>
+                    <!-- JavaScriptのエラーメッセージ -->
+                    <div class="form__error" id="js-family-name-error"></div>
                 </div>
                 <div class="content__name--given-name">
                     <div class="form__input--name">
@@ -41,6 +44,8 @@
                         {{ $message }}
                         @enderror
                     </div>
+                    <!-- JavaScriptのエラーメッセージ -->
+                    <div class="form__error" id="js-given-name-error"></div>
                 </div>
             </div>
         </div>
@@ -66,6 +71,8 @@
                     {{ $message }}
                     @enderror
                 </div>
+                <!-- JavaScriptのエラーメッセージ -->
+                <div class="form__error" id="js-gender-error"></div>
             </div>
         </div>
         <!-- メールアドレス入力 -->
@@ -84,6 +91,8 @@
                     {{ $message }}
                     @enderror
                 </div>
+                <!-- JavaScriptのエラーメッセージ -->
+                <div class="form__error" id="js-email-error"></div>
             </div>
         </div>
         <!-- 郵便番号入力 -->
@@ -109,6 +118,8 @@
                     {{ $message }}
                     @enderror
                 </div>
+                <!-- JavaScriptのエラーメッセージ -->
+                <div class="form__error" id="js-postcode-error"></div>
             </div>
         </div>
         <!-- 住所入力 -->
@@ -119,7 +130,7 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <input type="text"  class="p-region p-locality p-street-address p-extended-address" name="address" value="{{ old('address') }}">
+                    <input type="text" class="p-region p-locality p-street-address p-extended-address" name="address" value="{{ old('address') }}">
                 </div>
                 <p>　例）東京都渋谷区千駄ヶ谷1-2-3</p>
                 <div class="form__error">
@@ -127,6 +138,8 @@
                     {{ $message }}
                     @enderror
                 </div>
+                <!-- JavaScriptのエラーメッセージ -->
+                <div class="form__error" id="js-address-error"></div>
             </div>
         </div>
         <!-- 建物名入力 -->
@@ -154,6 +167,8 @@
                         {{ $message }}
                         @enderror
                     </div>
+                    <!-- JavaScriptのエラーメッセージ -->
+                    <div class="form__error" id="js-opinion-error"></div>
                 </div>
             </div>
         </div>
@@ -164,11 +179,12 @@
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    // 住所自動入力
+    document.addEventListener('DOMContentLoaded', function() {
         var postcodeInput = document.querySelector('input[name="postcode"]');
 
         // 郵便番号入力フィールドに対してイベントリスナーを追加
-        postcodeInput.addEventListener('input', function () {
+        postcodeInput.addEventListener('input', function() {
             // 全角を半角に変換
             var convertedValue = toHalfWidth(this.value);
             // 変換した値をフォームにセット
@@ -177,7 +193,7 @@
 
         // 全角を半角に変換する関数
         function toHalfWidth(value) {
-            return value.replace(/[０-９]/g, function (s) {
+            return value.replace(/[０-９]/g, function(s) {
                 return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
             });
         }
