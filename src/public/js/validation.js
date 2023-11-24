@@ -1,17 +1,9 @@
 function setupFocusEvent(inputName, jsErrorId) {
     var inputField = document.querySelector('input[name="' + inputName + '"]');
     var jsErrorElement = document.getElementById(jsErrorId);
-    inputField.addEventListener('blur', function () {
-        if (this.value.trim() === '') {
-            displayErrorMessage(jsErrorElement, "この項目は必須です。");
-        } else {
-            displayErrorMessage(jsErrorElement, ""); // エラーメッセージをクリア
-        }
-    });
-    var jsErrorElement = document.getElementById(jsErrorId);
 
     // フォームに入力した時のイベント
-    inputField.addEventListener('input', function () {
+    inputField.addEventListener('blur', function () {
         // バリデーション
         if (this.value.trim() === '') {
             displayErrorMessage(jsErrorElement, "この項目は必須です。");
