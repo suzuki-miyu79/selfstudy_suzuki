@@ -1,1 +1,0 @@
-# selfstudy_suzuki
